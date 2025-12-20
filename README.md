@@ -68,20 +68,20 @@ Abra o navegador ou use o `curl` no terminal e acesse:
 
 O projeto é dividido em **Camadas**. Imagine uma cebola: o núcleo é a regra de negócio e as camadas externas são as ferramentas.
 
-#### **A) Camada de Domínio (`src/domain`)**
+#### **Camada de Domínio (`src/domain`)**
 É onde as decisões são tomadas.
 *   **Interfaces (`interfaces/index.ts`):** São os "Contratos". Elas definem **o que** o sistema deve fazer (ex: `ILogger` diz que é preciso saber logar uma mensagem de `info`).
 *   **ReportService (`services/ReportService.ts`):** É o cérebro. Ele gera os dados fictícios e coordena o envio. **Destaque:** Ele não sabe *como* o e-mail é enviado, ele apenas pede para quem sabe (`IMailer`).
 
-#### **B) Camada de Infraestrutura (`src/infra`)**
+#### **Camada de Infraestrutura (`src/infra`)**
 É onde o trabalho pesado acontece.
 *   **WinstonLogger:** Implementa o log. No ambiente `dev`, ele usa o console. No `prod`, escreve no arquivo `app.log`.
 *   **NodemailerMailer:** Implementa o e-mail. No `dev`, ele usa o serviço **Ethereal** (gera o link de visualização). No `prod`, usaria um e-mail real.
 
-#### **C) O Coração da Injeção (`src/config`)**
+#### **O Coração da Injeção (`src/config`)**
 *   **container.ts:** É aqui que a "mágica" acontece. Nós dizemos ao Inversify: *"Quando o ReportService pedir um Logger, entregue o WinstonLogger"*. Isso é a **Inversão de Controle (IoC)**.
 
-#### **D) A Porta de Entrada (`src/main.ts` e `src/http`)**
+#### **A Porta de Entrada (`src/main.ts` e `src/http`)**
 *   **main.ts:** Liga o servidor Express.
 *   **ReportController:** Recebe o clique do usuário na URL, pede ao Container o serviço de relatório e entrega a resposta final.
 
