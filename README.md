@@ -91,7 +91,3 @@ O projeto é dividido em **Camadas**. Imagine uma cebola: o núcleo é a regra d
 2.  **IoC (Inversão de Controle):** O programador não dá `new Classe()`. O **Container** (Inversify) gerencia e entrega os objetos prontos para uso.
 3.  **Single Responsibility (S.O.L.I.D):** Cada arquivo tem apenas uma função. O Mailer só envia e-mail, o Logger só registra logs, e o Service só cuida do relatório.
 
-**Resumo da Apresentação:**
-*"Professores, este sistema mostra como o uso de Inversão de Dependência permite que o mesmo código de negócio funcione de formas diferentes em ambientes de Desenvolvimento e Produção apenas trocando as peças de infraestrutura através de um Container centralizado."*
-
-Boa sorte na faculdade! Você está apresentando um código com padrão de nível sênior.
