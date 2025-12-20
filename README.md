@@ -8,14 +8,22 @@
 Para que o projeto funcione, utilizamos as seguintes bibliotecas:
 
 - **Fundamentais:**
+- 
        - `inversify` & `reflect-metadata`: Permitem a Injeção de Dependência (entregar as ferramentas para as classes).
+  
        - `express`: Cria o servidor web e as rotas.
+  
        - `dotenv`: Lê o arquivo `.env` com as configurações do sistema.
+  
 - **Utilidades:**
        - `winston`: Sistema de logs profissional.
+  
        - `nodemailer`: Envia os e-mails.
+  
        - `@faker-js/faker`: Gera nomes e cidades aleatórias de forma automática.
+  
 - **Desenvolvimento:**
+- 
        - `typescript`, `ts-node` e `@types/*`: Ferramentas para programar com TypeScript e rodar o código sem precisar compilar manualmente o tempo todo.
 
 #### **Passo a Passo para Instalar:**
