@@ -84,10 +84,3 @@ O projeto é dividido em **Camadas**. Imagine uma cebola: o núcleo é a regra d
 #### **A Porta de Entrada (`src/main.ts` e `src/http`)**
 *   **main.ts:** Liga o servidor Express.
 *   **ReportController:** Recebe o clique do usuário na URL, pede ao Container o serviço de relatório e entrega a resposta final.
-
-### Princípios Aplicados
-
-1.  **DIP (Inversão de Dependência):** Nossas classes de alto nível (negócio) não dependem de classes de baixo nível (ferramentas), ambas dependem de **Interfaces**.
-2.  **IoC (Inversão de Controle):** O programador não dá `new Classe()`. O **Container** (Inversify) gerencia e entrega os objetos prontos para uso.
-3.  **Single Responsibility (S.O.L.I.D):** Cada arquivo tem apenas uma função. O Mailer só envia e-mail, o Logger só registra logs, e o Service só cuida do relatório.
-
